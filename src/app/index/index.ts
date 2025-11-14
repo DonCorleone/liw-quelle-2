@@ -30,6 +30,11 @@ export class Index {
       path: '/ols-header',
       title: 'OLS Header (Online Service)',
       description: 'Online service header with back link, title, lead text, button, and sidebar with required information'
+    },
+    {
+      path: '/icons',
+      title: 'Icons Library',
+      description: 'Complete icon library with 16px and 24px icons from the SUVA design system'
     }
   ];
 }

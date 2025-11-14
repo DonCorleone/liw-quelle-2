@@ -1,5 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/spacings';
+@import '../../styles/typography';
 
 .page-wrapper {
   min-height: 100vh;
@@ -31,10 +32,7 @@
 }
 
 .meta-nav-item {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   color: $sux-primary-gray-100;
   cursor: pointer;
   transition: color 0.2s;
@@ -139,10 +137,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   color: $sux-primary-gray-100;
   text-align: center;
 }
@@ -156,10 +151,7 @@
 }
 
 .user-name {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   color: $sux-primary-gray-100;
   white-space: nowrap;
   overflow: hidden;
@@ -167,10 +159,7 @@
 }
 
 .user-id {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 18px;
+  @include sux-text-tiny-medium;
   color: $sux-primary-gray-100;
   white-space: nowrap;
   overflow: hidden;
@@ -197,10 +186,7 @@
   display: inline-flex;
   align-items: center;
   gap: $sux-spacing-008;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-blue-100;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -219,10 +205,7 @@
 
 // Page Title
 .page-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  @include sux-h1;
   color: $sux-primary-orange-100;
   margin: 0;
   white-space: pre-wrap;
@@ -236,20 +219,14 @@
 }
 
 .lead-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  @include sux-lead;
   color: $sux-primary-gray-100;
   margin: 0;
   max-width: 738px;
 }
 
 .info-link {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-blue-100;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -276,10 +253,7 @@
   gap: $sux-spacing-024; // gap between text and icon if icon is present
   
   // Typography (Helvetica Neue Bold 14px/22px)
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-bold;
   color: $sux-primary-white;
   text-align: center;
   white-space: nowrap;
@@ -353,8 +327,7 @@
   }
 
   .lead-text {
-    font-size: 16px;
-    line-height: 24px;
+    @include sux-text;
   }
 
   .user-info {
@@ -362,11 +335,10 @@
   }
 
   .user-name {
-    font-size: 12px;
-    line-height: 18px;
+    @include sux-text-tiny-medium;
   }
 
   .meta-nav-item {
-    font-size: 12px;
+    @include sux-text-tiny-medium;
   }
 }

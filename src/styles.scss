@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'styles/colors';
 @import 'styles/spacings';
+@import 'styles/typography';
 
 * {
   box-sizing: border-box;
@@ -9,9 +10,9 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: $sux-font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #333333;
+  color: $sux-primary-gray-100;
   background-color: #f5f5f5;
 }

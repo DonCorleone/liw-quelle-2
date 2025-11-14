@@ -1,5 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/spacings';
+@import '../../styles/typography';
 
 .ols-header {
   background-color: $sux-primary-white;
@@ -33,10 +34,7 @@
   display: inline-flex;
   align-items: center;
   gap: $sux-spacing-008;
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-blue-100;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -56,10 +54,7 @@
 
 // Page Title
 .page-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  @include sux-h1;
   color: $sux-primary-orange-100;
   margin: 0;
   white-space: pre-wrap;
@@ -73,20 +68,14 @@
 }
 
 .lead-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  @include sux-lead;
   color: $sux-primary-gray-100;
   margin: 0;
   max-width: 738px;
 }
 
 .info-link {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-blue-100;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -114,10 +103,7 @@
   gap: $sux-spacing-024;
   
   // Typography
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-bold;
   color: $sux-primary-white;
   text-align: center;
   white-space: nowrap;
@@ -174,10 +160,7 @@
 }
 
 .sidebar-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-gray-100;
   margin: 0;
 }
@@ -200,10 +183,7 @@
 }
 
 .info-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small;
   color: $sux-primary-gray-100;
   margin: 0;
 }
@@ -238,8 +218,7 @@
   }
 
   .lead-text {
-    font-size: 16px;
-    line-height: 24px;
+    @include sux-text;
   }
 
   .title-section {

@@ -1,0 +1,212 @@
+// SUVA Design System Typography
+// Based on: https://www.figma.com/design/CRkuSruvIjOColXDCEoSAg/Die-Quelle-2.0?node-id=13278-90038
+
+// Font Family
+$sux-font-family: 'Helvetica Neue', sans-serif;
+
+// Desktop Headings
+
+// H1 Big (64px) /72Lh
+$sux-h1-big-font-size: 64px;
+$sux-h1-big-line-height: 72px;
+$sux-h1-big-font-weight: 500;
+$sux-h1-big-font-style: Medium;
+
+// H1 Normal (48px) /56Lh
+$sux-h1-font-size: 48px;
+$sux-h1-line-height: 56px;
+$sux-h1-font-weight: 500;
+$sux-h1-font-style: Medium;
+
+// H2 (32px) /42Lh
+$sux-h2-font-size: 32px;
+$sux-h2-line-height: 42px;
+$sux-h2-font-weight: 500;
+$sux-h2-font-style: Medium;
+
+// H3 (24px) /32Lh
+$sux-h3-font-size: 24px;
+$sux-h3-line-height: 32px;
+$sux-h3-font-weight: 500;
+$sux-h3-font-style: Medium;
+
+// H4 (22px) /30Lh
+$sux-h4-font-size: 22px;
+$sux-h4-line-height: 30px;
+$sux-h4-font-weight: 500;
+$sux-h4-font-style: Medium;
+
+// H5 (20px) /28Lh
+$sux-h5-font-size: 20px;
+$sux-h5-line-height: 28px;
+$sux-h5-font-weight: 500;
+$sux-h5-font-style: Medium;
+
+// H6 (16px) /26Lh
+$sux-h6-font-size: 16px;
+$sux-h6-line-height: 26px;
+$sux-h6-font-weight: 500;
+$sux-h6-font-style: Medium;
+
+// Lead (18px) /26Lh
+$sux-lead-font-size: 18px;
+$sux-lead-line-height: 26px;
+$sux-lead-font-weight: 500;
+$sux-lead-font-style: Medium;
+
+// Body Text (all devices)
+
+// Text (16px) /26Lh
+$sux-text-font-size: 16px;
+$sux-text-line-height: 26px;
+$sux-text-font-weight: 400;
+$sux-text-font-style: Roman;
+
+// Text Bold (16px) /26Lh
+$sux-text-bold-font-weight: 700;
+
+// Text Medium (16px) /26Lh (aka H6)
+$sux-text-medium-font-weight: 500;
+
+// Text Small (14px) /22Lh
+$sux-text-small-font-size: 14px;
+$sux-text-small-line-height: 22px;
+$sux-text-small-font-weight: 400;
+
+// Text Small Bold (14px) /22Lh
+$sux-text-small-bold-font-weight: 700;
+
+// Text Small Medium (14px) /22Lh
+$sux-text-small-medium-font-weight: 500;
+
+// Text Tiny (12px) /18Lh
+$sux-text-tiny-font-size: 12px;
+$sux-text-tiny-line-height: 18px;
+$sux-text-tiny-font-weight: 400;
+
+// Text Tiny Bold (12px) /18Lh
+$sux-text-tiny-bold-font-weight: 700;
+
+// Text Tiny Medium (12px) /18Lh
+$sux-text-tiny-medium-font-weight: 500;
+
+// Mixins for easy application
+
+@mixin sux-h1-big {
+  font-family: $sux-font-family;
+  font-size: $sux-h1-big-font-size;
+  line-height: $sux-h1-big-line-height;
+  font-weight: $sux-h1-big-font-weight;
+}
+
+@mixin sux-h1 {
+  font-family: $sux-font-family;
+  font-size: $sux-h1-font-size;
+  line-height: $sux-h1-line-height;
+  font-weight: $sux-h1-font-weight;
+}
+
+@mixin sux-h2 {
+  font-family: $sux-font-family;
+  font-size: $sux-h2-font-size;
+  line-height: $sux-h2-line-height;
+  font-weight: $sux-h2-font-weight;
+}
+
+@mixin sux-h3 {
+  font-family: $sux-font-family;
+  font-size: $sux-h3-font-size;
+  line-height: $sux-h3-line-height;
+  font-weight: $sux-h3-font-weight;
+}
+
+@mixin sux-h4 {
+  font-family: $sux-font-family;
+  font-size: $sux-h4-font-size;
+  line-height: $sux-h4-line-height;
+  font-weight: $sux-h4-font-weight;
+}
+
+@mixin sux-h5 {
+  font-family: $sux-font-family;
+  font-size: $sux-h5-font-size;
+  line-height: $sux-h5-line-height;
+  font-weight: $sux-h5-font-weight;
+}
+
+@mixin sux-h6 {
+  font-family: $sux-font-family;
+  font-size: $sux-h6-font-size;
+  line-height: $sux-h6-line-height;
+  font-weight: $sux-h6-font-weight;
+}
+
+@mixin sux-lead {
+  font-family: $sux-font-family;
+  font-size: $sux-lead-font-size;
+  line-height: $sux-lead-line-height;
+  font-weight: $sux-lead-font-weight;
+}
+
+@mixin sux-text {
+  font-family: $sux-font-family;
+  font-size: $sux-text-font-size;
+  line-height: $sux-text-line-height;
+  font-weight: $sux-text-font-weight;
+}
+
+@mixin sux-text-bold {
+  font-family: $sux-font-family;
+  font-size: $sux-text-font-size;
+  line-height: $sux-text-line-height;
+  font-weight: $sux-text-bold-font-weight;
+}
+
+@mixin sux-text-medium {
+  font-family: $sux-font-family;
+  font-size: $sux-text-font-size;
+  line-height: $sux-text-line-height;
+  font-weight: $sux-text-medium-font-weight;
+}
+
+@mixin sux-text-small {
+  font-family: $sux-font-family;
+  font-size: $sux-text-small-font-size;
+  line-height: $sux-text-small-line-height;
+  font-weight: $sux-text-small-font-weight;
+}
+
+@mixin sux-text-small-bold {
+  font-family: $sux-font-family;
+  font-size: $sux-text-small-font-size;
+  line-height: $sux-text-small-line-height;
+  font-weight: $sux-text-small-bold-font-weight;
+}
+
+@mixin sux-text-small-medium {
+  font-family: $sux-font-family;
+  font-size: $sux-text-small-font-size;
+  line-height: $sux-text-small-line-height;
+  font-weight: $sux-text-small-medium-font-weight;
+}
+
+@mixin sux-text-tiny {
+  font-family: $sux-font-family;
+  font-size: $sux-text-tiny-font-size;
+  line-height: $sux-text-tiny-line-height;
+  font-weight: $sux-text-tiny-font-weight;
+}
+
+@mixin sux-text-tiny-bold {
+  font-family: $sux-font-family;
+  font-size: $sux-text-tiny-font-size;
+  line-height: $sux-text-tiny-line-height;
+  font-weight: $sux-text-tiny-bold-font-weight;
+}
+
+@mixin sux-text-tiny-medium {
+  font-family: $sux-font-family;
+  font-size: $sux-text-tiny-font-size;
+  line-height: $sux-text-tiny-line-height;
+  font-weight: $sux-text-tiny-medium-font-weight;
+}

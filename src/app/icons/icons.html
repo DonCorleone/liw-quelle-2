@@ -1,0 +1,42 @@
+<div class="icons-page">
+  <header class="page-header">
+    <h1 class="title">Icons mysuva.ch and OLS</h1>
+    <p class="subtitle">All icons have to be stored always in both sizes (24px and 16px)</p>
+  </header>
+
+  <!-- Icons 16px Section -->
+  <section class="icon-section">
+    <h2 class="section-title">Icons 16px</h2>
+    <div class="icon-grid">
+      @for (iconEntry of icon16List; track iconEntry[0]) {
+        <div class="icon-item">
+          <img [src]="iconEntry[1]" [alt]="iconEntry[0]" class="icon icon-16" />
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Icons 24px Section -->
+  <section class="icon-section">
+    <h2 class="section-title">Icons 24px</h2>
+    <div class="icon-grid">
+      @for (iconEntry of icon24List; track iconEntry[0]) {
+        <div class="icon-item">
+          <img [src]="iconEntry[1]" [alt]="iconEntry[0]" class="icon icon-24" />
+        </div>
+      }
+    </div>
+  </section>
+
+  <!-- Rich Text Icons 16px Section -->
+  <section class="icon-section">
+    <h2 class="section-title">Rich Text Icons 16px</h2>
+    <div class="icon-grid">
+      @for (iconEntry of richTextList; track iconEntry[0]) {
+        <div class="icon-item">
+          <img [src]="iconEntry[1]" [alt]="iconEntry[0]" class="icon icon-16" />
+        </div>
+      }
+    </div>
+  </section>
+</div>

@@ -1,0 +1,70 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+@import '../../styles/typography';
+
+.icons-page {
+  background: $sux-primary-white;
+  min-height: 100vh;
+  padding: $sux-spacing-056 $sux-spacing-024;
+}
+
+.page-header {
+  margin-bottom: $sux-spacing-048;
+  
+  .title {
+    @include sux-h1-big;
+    color: $sux-primary-gray-100;
+    margin: 0 0 $sux-spacing-024 0;
+  }
+  
+  .subtitle {
+    @include sux-text;
+    color: $sux-primary-gray-100;
+    margin: 0;
+  }
+}
+
+.icon-section {
+  margin-bottom: $sux-spacing-080;
+  
+  .section-title {
+    @include sux-h3;
+    color: $sux-primary-gray-100;
+    margin: 0 0 $sux-spacing-032 0;
+  }
+}
+
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(64px, 1fr));
+  gap: $sux-spacing-024;
+}
+
+.icon-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $sux-spacing-016;
+  background: $sux-primary-white;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+  
+  &:hover {
+    background: $sux-primary-bg-gradient-light-grey;
+  }
+}
+
+.icon {
+  display: block;
+  object-fit: contain;
+  
+  &.icon-16 {
+    width: 16px;
+    height: 16px;
+  }
+  
+  &.icon-24 {
+    width: 24px;
+    height: 24px;
+  }
+}

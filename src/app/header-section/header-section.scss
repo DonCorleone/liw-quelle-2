@@ -1,5 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/spacings';
+@import '../../styles/typography';
 
 .header-section {
   background-color: $sux-primary-white;
@@ -37,10 +38,7 @@
 
 .breadcrumb-link,
 .breadcrumb-current {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   text-decoration: none;
   white-space: nowrap;
 }
@@ -74,20 +72,14 @@
 }
 
 .page-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 64px;
-  line-height: 72px;
+  @include sux-h1-big;
   color: $sux-primary-orange-100;
   margin: 0;
   white-space: pre-wrap;
 }
 
 .lead-text {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  @include sux-lead;
   color: $sux-primary-gray-100;
   margin: 0;
   flex: 1;
@@ -152,10 +144,7 @@
 }
 
 .updates-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 26px;
+  @include sux-text-medium;
   color: $sux-primary-gray-100;
   margin: 0;
 }
@@ -179,19 +168,13 @@
 }
 
 .update-meta {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small;
   color: $sux-primary-gray-100;
   margin: 0;
 }
 
 .update-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   color: $sux-primary-blue-100;
   margin: 0;
 }
@@ -221,13 +204,11 @@
   }
 
   .page-title {
-    font-size: 48px;
-    line-height: 56px;
+    @include sux-h1;
   }
 
   .lead-text {
-    font-size: 16px;
-    line-height: 24px;
+    @include sux-text;
   }
 
   .title-section {

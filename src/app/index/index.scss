@@ -1,5 +1,6 @@
 @import '../../styles/colors';
 @import '../../styles/spacings';
+@import '../../styles/typography';
 
 .index-page {
   min-height: 100vh;
@@ -23,19 +24,13 @@
 }
 
 .main-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 48px;
-  line-height: 56px;
+  @include sux-h1;
   color: $sux-primary-orange-100;
   margin: 0 0 $sux-spacing-016 0;
 }
 
 .subtitle {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 26px;
+  @include sux-lead;
   color: $sux-primary-gray-100;
   margin: 0;
 }
@@ -76,19 +71,13 @@
 }
 
 .card-title {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 24px;
-  line-height: 32px;
+  @include sux-h3;
   color: $sux-primary-blue-100;
   margin: 0 0 $sux-spacing-016 0;
 }
 
 .card-description {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small;
   color: $sux-primary-gray-100;
   margin: 0 0 $sux-spacing-024 0;
   flex: 1;
@@ -102,10 +91,7 @@
 }
 
 .view-link {
-  font-family: 'Helvetica Neue', sans-serif;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 22px;
+  @include sux-text-small-medium;
   color: $sux-primary-blue-100;
   transition: all 0.3s ease;
   display: inline-flex;
@@ -130,8 +116,7 @@
   }
 
   .subtitle {
-    font-size: 16px;
-    line-height: 24px;
+    @include sux-text;
   }
 
   .components-grid {
@@ -144,7 +129,6 @@
   }
 
   .card-title {
-    font-size: 20px;
-    line-height: 28px;
+    @include sux-h5;
   }
 }

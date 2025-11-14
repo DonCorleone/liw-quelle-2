@@ -16,5 +16,9 @@ export const routes: Routes = [
   {
     path: 'ols-header',
     loadComponent: () => import('./ols-header/ols-header').then(m => m.OlsHeader)
+  },
+  {
+    path: 'icons',
+    loadComponent: () => import('./icons/icons').then(m => m.IconsComponent)
   }
 ];
