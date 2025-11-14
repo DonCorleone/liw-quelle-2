@@ -1,0 +1,57 @@
+// SUVA Design System Colors
+// Based on: https://www.figma.com/design/CRkuSruvIjOColXDCEoSAg/Die-Quelle-2.0?node-id=28853-228860
+
+// Primary Colors
+$sux-primary-gray-100: #666666;
+$sux-primary-orange-100: #ff8200;
+$sux-primary-blue-100: #00b8cf;
+$sux-primary-white: #ffffff;
+$sux-primary-bg-gradient-light-grey: #f2f2f2;
+
+// Primary Color Variations
+$sux-gray-75: #8c8c8c;
+$sux-gray-50: #b3b3b3;
+$sux-gray-25: #d9d9d9;
+
+$sux-orange-75: #ffa140;
+$sux-orange-50: #ffc07f;
+$sux-orange-25: #ffe0bf;
+
+$sux-blue-75: #40cadb;
+$sux-blue-50: #7fdbe7;
+$sux-blue-25: #bfedf3;
+
+// Secondary Colors
+$sux-secondary-interaction-blue: #007180;
+$sux-secondary-interaction-orange: #a85700;
+$sux-secondary-green-100: #c1e200;
+$sux-secondary-red-100: #eb0064;
+$sux-secondary-yellow-100: #fce300;
+
+// Secondary Color Variations
+$sux-secondary-interaction-blue-25: #b8d4d8;
+$sux-secondary-interaction-blue-15: #d9eaec;
+$sux-secondary-interaction-blue-pressed: #00363d;
+
+$sux-green-50: #e0f07f;
+$sux-green-25: #eff8bf;
+
+$sux-red-50: #f57fb1;
+$sux-red-25: #fabfd8;
+
+$sux-yellow-50: #fdf17f;
+$sux-yellow-25: #fef8bf;
+
+// System Colors
+$sux-red-error: #cc3333;
+$sux-green-verification: #208048;
+$sux-yellow-clearance: #febf00;
+
+// System Color Hover States
+$sux-red-hover: #8f2424;
+$sux-green-hover: #165a32;
+$sux-yellow-hover: #cb9900;
+
+// Button State Colors (derived from primary blue)
+$sux-blue-hover: #009fb5;
+$sux-blue-active: #008a9d;

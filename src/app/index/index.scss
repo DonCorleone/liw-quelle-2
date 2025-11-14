@@ -1,0 +1,150 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+
+.index-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+  padding: $sux-spacing-040 $sux-spacing-016 + 4px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Header
+.page-header {
+  text-align: center;
+  margin-bottom: $sux-spacing-056 + 4px;
+  padding: $sux-spacing-040 $sux-spacing-016 + 4px;
+  background-color: $sux-primary-white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.main-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: $sux-primary-orange-100;
+  margin: 0 0 $sux-spacing-016 0;
+}
+
+.subtitle {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+// Components Grid
+.components-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: $sux-spacing-024;
+}
+
+.component-card {
+  background-color: $sux-primary-white;
+  border-radius: 12px;
+  padding: $sux-spacing-032;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  border: 2px solid transparent;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    border-color: $sux-primary-blue-100;
+
+    .view-link {
+      color: $sux-primary-orange-100;
+      transform: translateX(4px);
+    }
+  }
+
+  &:active {
+    transform: translateY(-2px);
+  }
+}
+
+.card-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: $sux-primary-blue-100;
+  margin: 0 0 $sux-spacing-016 0;
+}
+
+.card-description {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-gray-100;
+  margin: 0 0 $sux-spacing-024 0;
+  flex: 1;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: auto;
+}
+
+.view-link {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-blue-100;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: $sux-spacing-004;
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .index-page {
+    padding: $sux-spacing-024 $sux-spacing-016;
+  }
+
+  .page-header {
+    margin-bottom: $sux-spacing-040;
+    padding: $sux-spacing-032 $sux-spacing-016 + 4px;
+  }
+
+  .main-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .components-grid {
+    grid-template-columns: 1fr;
+    gap: $sux-spacing-016;
+  }
+
+  .component-card {
+    padding: $sux-spacing-024;
+  }
+
+  .card-title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}

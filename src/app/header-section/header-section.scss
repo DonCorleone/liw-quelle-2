@@ -1,0 +1,240 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+
+.header-section {
+  background-color: $sux-primary-white;
+  padding: $sux-spacing-032 $sux-spacing-040 + 2px $sux-spacing-080 158px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: $sux-spacing-032 + 4px;
+  max-width: 1124px;
+}
+
+// Main Content
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-048;
+  width: 737px;
+  flex-shrink: 0;
+}
+
+// Breadcrumb Navigation
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: $sux-spacing-008 + 4px;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-item-wrapper {
+  display: flex;
+  align-items: center;
+  gap: $sux-spacing-008 + 4px;
+}
+
+.breadcrumb-link,
+.breadcrumb-current {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.breadcrumb-link {
+  color: $sux-primary-blue-100;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.breadcrumb-current {
+  color: $sux-primary-gray-100;
+}
+
+.breadcrumb-arrow {
+  width: 8px;
+  height: 8px;
+  color: $sux-primary-blue-100;
+  flex-shrink: 0;
+}
+
+// Title Section
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-032;
+  height: 280px;
+}
+
+.page-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 64px;
+  line-height: 72px;
+  color: $sux-primary-orange-100;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+.lead-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+  flex: 1;
+}
+
+// Sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-032;
+  flex: 1;
+  padding-top: $sux-spacing-064 + 2px;
+  min-width: 0;
+}
+
+// Service Icons
+.service-icons {
+  display: flex;
+  gap: $sux-spacing-024;
+  align-items: flex-start;
+  padding-top: 14px;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.icon-img {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+// Updates Section
+.updates-section {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008 + 2px;
+}
+
+.updates-header {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008 + 2px;
+}
+
+.updates-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  position: relative;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.update-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.update-meta {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+.update-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-blue-100;
+  margin: 0;
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .header-section {
+    padding: $sux-spacing-032 $sux-spacing-040 + 2px $sux-spacing-080 $sux-spacing-040 + 2px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .sidebar {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-section {
+    padding: $sux-spacing-024 $sux-spacing-024 $sux-spacing-056 + 4px $sux-spacing-024;
+  }
+
+  .page-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  .lead-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title-section {
+    height: auto;
+  }
+
+  .service-icons {
+    gap: $sux-spacing-016;
+  }
+}

@@ -1,0 +1,79 @@
+<div class="header-section">
+  <div class="content-wrapper">
+    <!-- Main Content -->
+    <div class="main-content">
+      <!-- Breadcrumb Navigation -->
+      <nav class="breadcrumb">
+        @for (item of breadcrumbs; track item.label; let isLast = $last; let idx = $index) {
+          <div class="breadcrumb-item-wrapper">
+            @if (item.url) {
+              <a [href]="item.url" class="breadcrumb-link">{{ item.label }}</a>
+            } @else {
+              <span class="breadcrumb-current">{{ item.label }}</span>
+            }
+            @if (!isLast) {
+              <svg class="breadcrumb-arrow" width="8" height="8" viewBox="0 0 8 8" fill="none">
+                <path d="M2 1L5 4L2 7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            }
+          </div>
+        }
+      </nav>
+
+      <!-- Title and Lead -->
+      <div class="title-section">
+        <h1 class="page-title">
+          Headline H1 auf zwei<br>
+          Zeilen verteilt
+        </h1>
+        <p class="lead-text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+          incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+          exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+          dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+      </div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <!-- Service Icons -->
+      <div class="service-icons">
+        <button class="icon-button" aria-label="Favorit">
+          <img [src]="favoriteIcon" alt="" class="icon-img">
+        </button>
+        <button class="icon-button" aria-label="Teilen">
+          <img [src]="shareIcon" alt="" class="icon-img">
+        </button>
+        <button class="icon-button" aria-label="Drucken">
+          <img [src]="printIcon" alt="" class="icon-img">
+        </button>
+        <button class="icon-button" aria-label="Hilfe">
+          <img [src]="helpIcon" alt="" class="icon-img">
+        </button>
+      </div>
+
+      <!-- Updates Section -->
+      <div class="updates-section">
+        <div class="updates-header">
+          <h2 class="updates-title">Updates</h2>
+          <div class="divider">
+            <img [src]="lineImage" alt="" class="divider-line">
+          </div>
+        </div>
+
+        @for (update of updates; track update.title; let isLast = $last) {
+          <div class="update-item">
+            <p class="update-meta">{{ update.date }} / {{ update.type }}</p>
+            <p class="update-title">{{ update.title }}</p>
+          </div>
+          @if (!isLast) {
+            <div class="divider">
+              <img [src]="lineImage" alt="" class="divider-line">
+            </div>
+          }
+        }
+      </div>
+    </aside>
+  </div>
+</div>

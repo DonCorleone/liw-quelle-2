@@ -1,0 +1,20 @@
+<div class="index-page">
+  <div class="container">
+    <header class="page-header">
+      <h1 class="main-title">SUVA Component Library</h1>
+      <p class="subtitle">Figma Design System Implementation</p>
+    </header>
+
+    <div class="components-grid">
+      @for (component of components; track component.path) {
+        <a [routerLink]="component.path" class="component-card">
+          <h2 class="card-title">{{ component.title }}</h2>
+          <p class="card-description">{{ component.description }}</p>
+          <div class="card-footer">
+            <span class="view-link">View Component →</span>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</div>

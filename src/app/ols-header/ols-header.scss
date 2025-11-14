@@ -1,0 +1,248 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+
+.ols-header {
+  background-color: $sux-primary-white;
+  padding: $sux-spacing-032 157px $sux-spacing-080 158px;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: $sux-spacing-032 + 4px;
+  max-width: 1124px;
+}
+
+// Main Content
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-032;
+  width: 737px;
+  flex-shrink: 0;
+}
+
+// Title Section
+.title-section {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-048;
+}
+
+// Back Link
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: $sux-spacing-008;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $sux-primary-blue-100;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.back-icon {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  color: $sux-primary-blue-100;
+}
+
+// Page Title
+.page-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 56px;
+  color: $sux-primary-orange-100;
+  margin: 0;
+  white-space: pre-wrap;
+}
+
+// Lead Section
+.lead-section {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008;
+}
+
+.lead-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+  max-width: 738px;
+}
+
+.info-link {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $sux-primary-blue-100;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  width: fit-content;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+// Primary Button
+.primary-button {
+  // Background and borders
+  background-color: $sux-primary-blue-100;
+  border: none;
+  border-radius: 48px;
+  
+  // Spacing
+  padding: 12px $sux-spacing-024 14px $sux-spacing-024;
+  
+  // Layout
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: $sux-spacing-024;
+  
+  // Typography
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-white;
+  text-align: center;
+  white-space: nowrap;
+  
+  // Interaction
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  // Dimensions
+  min-height: $sux-spacing-048;
+  min-width: 140px;
+  max-width: 350px;
+  
+  // States
+  &:hover {
+    background-color: $sux-blue-hover;
+  }
+
+  &:active {
+    background-color: $sux-blue-active;
+  }
+
+  &:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $sux-primary-blue-100;
+    outline-offset: 2px;
+  }
+}
+
+// Sidebar
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding-top: $sux-spacing-080;
+  min-width: 0;
+}
+
+.sidebar-content {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008 + 2px;
+}
+
+.sidebar-header {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008 + 2px;
+}
+
+.sidebar-title {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+.divider {
+  height: 1px;
+  width: 100%;
+  position: relative;
+}
+
+.divider-line {
+  width: 100%;
+  height: 1px;
+  display: block;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.info-text {
+  font-family: 'Helvetica Neue', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .ols-header {
+    padding: $sux-spacing-032 $sux-spacing-040 + 2px $sux-spacing-080 $sux-spacing-040 + 2px;
+  }
+
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .main-content {
+    width: 100%;
+  }
+
+  .sidebar {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .ols-header {
+    padding: $sux-spacing-024 $sux-spacing-024 $sux-spacing-056 + 4px $sux-spacing-024;
+  }
+
+  .page-title {
+    font-size: 36px;
+    line-height: 44px;
+  }
+
+  .lead-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .title-section {
+    gap: $sux-spacing-032;
+  }
+}
