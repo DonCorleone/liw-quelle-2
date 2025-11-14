@@ -3,10 +3,10 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'app-icons',
   templateUrl: './icons.html',
-  styleUrls: ['./icons.scss'],
+  styleUrl: './icons.scss',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class IconsComponent {
+export default class IconsComponent {
   // Icon URLs from Figma
   icons = {
     // 24px icons

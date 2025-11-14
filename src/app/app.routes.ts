@@ -19,6 +19,18 @@ export const routes: Routes = [
   },
   {
     path: 'icons',
-    loadComponent: () => import('./icons/icons').then(m => m.IconsComponent)
+    loadComponent: () => import('./icons/icons').then(m => m.default)
+  },
+  {
+    path: 'effects',
+    loadComponent: () => import('./effects/effects').then(m => m.default)
+  },
+  {
+    path: 'focus',
+    loadComponent: () => import('./focus/focus').then(m => m.default)
+  },
+  {
+    path: 'grid',
+    loadComponent: () => import('./grid/grid').then(m => m.default)
   }
 ];

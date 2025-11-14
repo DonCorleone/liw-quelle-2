@@ -35,6 +35,21 @@ export class Index {
       path: '/icons',
       title: 'Icons Library',
       description: 'Complete icon library with 16px and 24px icons from the SUVA design system'
+    },
+    {
+      path: '/effects',
+      title: 'Effect Styles',
+      description: 'Drop shadow styles and visual effects for elevation and depth'
+    },
+    {
+      path: '/focus',
+      title: 'Focus States',
+      description: 'Focus ring styles for keyboard navigation and accessibility'
+    },
+    {
+      path: '/grid',
+      title: 'Grid System',
+      description: 'Responsive breakpoints, grid specifications, and layout containers'
     }
   ];
 }

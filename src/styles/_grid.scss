@@ -1,0 +1,75 @@
+// SUVA Grid System and Breakpoints
+
+// Breakpoints (from Figma)
+$breakpoint-sm: 600px;   // 0-599: Mobile (Micro grid - 6 columns)
+$breakpoint-md: 768px;   // 600-767: Tablet portrait (Medium grid - 12 columns)
+$breakpoint-lg: 1280px;  // 768-1279: Tablet landscape (Wide grid - 12 columns)
+$breakpoint-xl: 1440px;  // 1280-1440: Desktop (Desktop grid - 12 columns)
+
+// Grid Specifications
+// Mobile (375px - iPhone 8)
+$grid-micro-columns: 6;
+$grid-micro-offset: 27px;
+$grid-micro-gutter: 27px;
+
+// Tablet (1024px - iPad)
+$grid-medium-columns: 12;
+$grid-medium-offset: 42px;
+$grid-medium-gutter: 42px;
+
+// Desktop (1440px)
+$grid-desktop-columns: 12;
+$grid-desktop-offset: 158px;
+$grid-desktop-gutter: 36px;
+
+// Section widths
+$section-normal-width: 660px;  // 6 columns (Normal component)
+$section-wide-width: 1124px;   // 10 columns (Wide component)
+$section-full-width: 1440px;   // 12 columns (Full width)
+
+// Mixins for responsive design
+@mixin mobile-only {
+  @media (max-width: #{$breakpoint-sm - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: $breakpoint-sm) and (max-width: #{$breakpoint-md - 1px}) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: $breakpoint-md) and (max-width: #{$breakpoint-lg - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin desktop-xl {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Container mixins
+@mixin container-normal {
+  max-width: $section-normal-width;
+  margin: 0 auto;
+}
+
+@mixin container-wide {
+  max-width: $section-wide-width;
+  margin: 0 auto;
+}
+
+@mixin container-full {
+  max-width: $section-full-width;
+  margin: 0 auto;
+}

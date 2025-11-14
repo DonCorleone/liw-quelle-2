@@ -1,0 +1,93 @@
+<div class="grid-page">
+  <div class="container">
+    <h1 class="title">Grid System & Breakpoints</h1>
+    
+    <!-- Breakpoints Section -->
+    <section class="section">
+      <h2 class="section-title">Responsive Breakpoints</h2>
+      <p class="section-description">
+        The SUVA design system uses a mobile-first responsive grid that adapts across 5 breakpoints
+      </p>
+      
+      <div class="breakpoints-table">
+        <div class="table-header">
+          <div class="col">Name</div>
+          <div class="col">Screen Size</div>
+          <div class="col">Breakpoint</div>
+          <div class="col">Variable</div>
+          <div class="col">Columns</div>
+          <div class="col">Offset</div>
+          <div class="col">Gutter</div>
+        </div>
+        
+        @for (bp of breakpoints; track bp.name) {
+          <div class="table-row">
+            <div class="col"><strong>{{ bp.name }}</strong><br><span class="device">{{ bp.device }}</span></div>
+            <div class="col">{{ bp.screenSize }}</div>
+            <div class="col highlight">{{ bp.breakpoint }}</div>
+            <div class="col code">{{ bp.variable }}</div>
+            <div class="col">{{ bp.columns }}</div>
+            <div class="col">{{ bp.offset }}</div>
+            <div class="col">{{ bp.gutter }}</div>
+          </div>
+        }
+      </div>
+    </section>
+    
+    <!-- Section Widths -->
+    <section class="section">
+      <h2 class="section-title">Section Widths</h2>
+      <p class="section-description">
+        Three standard container widths for desktop layouts
+      </p>
+      
+      <div class="sections-grid">
+        @for (section of sections; track section.name) {
+          <div class="section-card">
+            <h3 class="card-title">{{ section.name }}</h3>
+            <div class="card-width">{{ section.width }}</div>
+            <div class="card-columns">{{ section.columns }}</div>
+            <p class="card-description">{{ section.description }}</p>
+          </div>
+        }
+      </div>
+    </section>
+    
+    <!-- Visual Examples -->
+    <section class="section">
+      <h2 class="section-title">Visual Grid Examples</h2>
+      
+      <div class="grid-examples">
+        <!-- Normal Width Example -->
+        <div class="example-item">
+          <div class="example-label">Normal (660px)</div>
+          <div class="example-grid normal">
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+          </div>
+        </div>
+        
+        <!-- Wide Width Example -->
+        <div class="example-item">
+          <div class="example-label">Wide (1124px)</div>
+          <div class="example-grid wide">
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+            <div class="grid-column"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</div>

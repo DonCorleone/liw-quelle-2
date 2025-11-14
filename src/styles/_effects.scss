@@ -1,0 +1,53 @@
+// SUVA Effect Styles - Drop Shadows
+
+// Shadow Small (default)
+// Used for subtle elevation on cards, buttons, and UI elements
+$sux-shadow-small: 
+  0px 1px 1px 0px rgba(0, 0, 0, 0.05),
+  0px 2px 3px 0px rgba(0, 0, 0, 0.07),
+  0px 2px 10px 0px rgba(0, 0, 0, 0.13),
+  0px 10px 20px 0px rgba(0, 0, 0, 0.2);
+
+// Shadow Large
+// Used for prominent elevation on modals, popovers, and lifted elements
+$sux-shadow-large:
+  0px 1px 4px 0px rgba(0, 0, 0, 0.07),
+  0px 2px 12px 0px rgba(0, 0, 0, 0.2),
+  0px 3px 30px 0px rgba(0, 0, 0, 0.26),
+  0px 10px 100px 0px rgba(0, 0, 0, 0.4);
+
+// Hover Shadow (same as large for hover states)
+$sux-shadow-hover: $sux-shadow-large;
+
+// Focus Ring
+// Used for keyboard navigation and accessibility focus states
+$sux-focus-ring: 0px 0px 0px 2px $sux-secondary-interaction-blue, 0px 0px 0px 7px #bfedf3;
+
+// Border Colors
+$sux-border-gray: #8c8c8c;
+$sux-border-blue: $sux-primary-blue-100;
+
+// Mixins for easy application
+@mixin sux-shadow-small {
+  box-shadow: $sux-shadow-small;
+}
+
+@mixin sux-shadow-large {
+  box-shadow: $sux-shadow-large;
+}
+
+@mixin sux-shadow-hover {
+  box-shadow: $sux-shadow-hover;
+}
+
+@mixin sux-focus-ring {
+  box-shadow: $sux-focus-ring;
+}
+
+@mixin sux-border-gray {
+  border: 1px solid $sux-border-gray;
+}
+
+@mixin sux-border-blue {
+  border: 2px solid $sux-border-blue;
+}

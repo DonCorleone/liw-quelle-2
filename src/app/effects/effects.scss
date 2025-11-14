@@ -1,0 +1,132 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+@import '../../styles/typography';
+@import '../../styles/effects';
+
+.effects-page {
+  min-height: 100vh;
+  background-color: $sux-primary-white;
+  padding: $sux-spacing-040 $sux-spacing-040 + 2px $sux-spacing-080;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-048;
+}
+
+// Header
+.title {
+  @include sux-h1-big;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+// Section
+.section {
+  background-color: $sux-primary-bg-gradient-light-grey;
+  border-radius: 8px;
+  padding: $sux-spacing-032;
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-040;
+}
+
+.section-header {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-008;
+}
+
+.section-title {
+  @include sux-h3;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+// Examples Grid
+.examples-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: $sux-spacing-056;
+  padding: $sux-spacing-040 0;
+}
+
+.example-item {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-016;
+  align-items: flex-start;
+}
+
+.example-label {
+  @include sux-text-small;
+  color: $sux-primary-gray-100;
+  margin: 0;
+}
+
+.example-box {
+  width: 150px;
+  height: 150px;
+  background-color: $sux-primary-white;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.3s ease;
+  
+  // Shadow variations
+  &.no-shadow {
+    box-shadow: none;
+  }
+  
+  &.shadow-small {
+    @include sux-shadow-small;
+  }
+  
+  &.shadow-large {
+    @include sux-shadow-large;
+  }
+  
+  &.shadow-hover {
+    @include sux-shadow-large;
+  }
+}
+
+.cursor-icon {
+  position: absolute;
+  right: 26px;
+  bottom: 28px;
+  width: 28px;
+  height: 34px;
+}
+
+// Responsive Design
+@media (max-width: 1200px) {
+  .effects-page {
+    padding: $sux-spacing-032 $sux-spacing-040 + 2px $sux-spacing-080;
+  }
+}
+
+@media (max-width: 768px) {
+  .effects-page {
+    padding: $sux-spacing-024 $sux-spacing-024 $sux-spacing-056 + 4px;
+  }
+
+  .title {
+    @include sux-h1;
+  }
+
+  .examples-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: $sux-spacing-032;
+  }
+
+  .example-box {
+    width: 140px;
+    height: 140px;
+  }
+}
