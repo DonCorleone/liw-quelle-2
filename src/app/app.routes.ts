@@ -32,5 +32,13 @@ export const routes: Routes = [
   {
     path: 'grid',
     loadComponent: () => import('./grid/grid').then(m => m.default)
+  },
+  {
+    path: 'accordion',
+    loadComponent: () => import('./accordion/accordion').then(m => m.default)
+  },
+  {
+    path: 'stepper',
+    loadComponent: () => import('./stepper/stepper').then(m => m.default)
   }
 ];

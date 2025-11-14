@@ -1,0 +1,108 @@
+<div class="stepper-container">
+  <h1>Stepper & Slider</h1>
+  <p class="description">Interactive stepper and slider components for rating scales and input</p>
+
+  <!-- Desktop Stepper (5-point scale) -->
+  <section class="demo-section">
+    <h2>Stepper - Desktop</h2>
+    <div class="stepper desktop-stepper">
+      <div class="stepper-track"></div>
+      <div 
+        class="stepper-progress" 
+        [style.width.%]="(desktopSelected() / (desktopOptions.length - 1)) * 100"
+      ></div>
+      
+      @for (option of desktopOptions; track option.value) {
+        <button
+          class="stepper-option"
+          [class.selected]="desktopSelected() === option.value"
+          [class.active]="desktopSelected() >= option.value"
+          [style.left.%]="(option.value / (desktopOptions.length - 1)) * 100"
+          (click)="selectDesktopOption(option.value)"
+          type="button"
+        >
+          <div class="stepper-point"></div>
+          <div class="stepper-label">{{ option.label }}</div>
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Mobile Stepper (3-point scale) -->
+  <section class="demo-section">
+    <h2>Stepper - Mobile</h2>
+    <div class="stepper mobile-stepper">
+      <div class="stepper-track"></div>
+      <div 
+        class="stepper-progress" 
+        [style.width.%]="(mobileSelected() / (mobileOptions.length - 1)) * 100"
+      ></div>
+      
+      @for (option of mobileOptions; track option.value) {
+        <button
+          class="stepper-option"
+          [class.selected]="mobileSelected() === option.value"
+          [class.active]="mobileSelected() >= option.value"
+          [style.left.%]="(option.value / (mobileOptions.length - 1)) * 100"
+          (click)="selectMobileOption(option.value)"
+          type="button"
+        >
+          <div class="stepper-point"></div>
+          <div class="stepper-label">{{ option.label }}</div>
+        </button>
+      }
+    </div>
+  </section>
+
+  <!-- Desktop Slider (continuous) -->
+  <section class="demo-section">
+    <h2>Slider - Desktop</h2>
+    <div class="slider desktop-slider">
+      <div class="slider-track"></div>
+      <div 
+        class="slider-progress" 
+        [style.width.%]="sliderDesktopValue()"
+      ></div>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        [value]="sliderDesktopValue()"
+        (input)="onDesktopSliderChange($event)"
+        class="slider-input"
+      />
+      <div 
+        class="slider-thumb"
+        [style.left.%]="sliderDesktopValue()"
+      >
+        <div class="slider-label">{{ sliderDesktopValue() }}%</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mobile Slider (continuous) -->
+  <section class="demo-section">
+    <h2>Slider - Mobile</h2>
+    <div class="slider mobile-slider">
+      <div class="slider-track"></div>
+      <div 
+        class="slider-progress" 
+        [style.width.%]="sliderMobileValue()"
+      ></div>
+      <input
+        type="range"
+        min="0"
+        max="100"
+        [value]="sliderMobileValue()"
+        (input)="onMobileSliderChange($event)"
+        class="slider-input"
+      />
+      <div 
+        class="slider-thumb"
+        [style.left.%]="sliderMobileValue()"
+      >
+        <div class="slider-label">{{ sliderMobileValue() }}%</div>
+      </div>
+    </div>
+  </section>
+</div>

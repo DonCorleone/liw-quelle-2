@@ -1,0 +1,229 @@
+@import '../../styles/colors';
+@import '../../styles/spacings';
+@import '../../styles/typography';
+
+.accordion-container {
+  max-width: 660px;
+  margin: 0 auto;
+  padding: $sux-spacing-040;
+}
+
+h1 {
+  @include sux-h1;
+  color: $sux-primary-gray-100;
+  margin-bottom: $sux-spacing-016;
+}
+
+.description {
+  @include sux-text-medium;
+  color: $sux-primary-gray-100;
+  margin-bottom: $sux-spacing-040;
+}
+
+.accordion-list {
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-016;
+}
+
+.accordion-item {
+  background: $sux-primary-white;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+// Hide the checkbox completely
+.accordion-toggle {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+// Accordion header (clickable)
+.accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 19px $sux-spacing-024;
+  cursor: pointer;
+  background: $sux-primary-white;
+  transition: background-color 0.2s ease;
+  gap: $sux-spacing-008;
+
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.accordion-title-section {
+  display: flex;
+  align-items: center;
+  gap: $sux-spacing-008;
+  flex: 1;
+  min-width: 0;
+}
+
+.accordion-title {
+  @include sux-text-medium;
+  color: $sux-primary-gray-100;
+}
+
+.accordion-count {
+  @include sux-text-medium;
+  color: $sux-primary-orange-100;
+  flex-shrink: 0;
+}
+
+// Chevron icon (CSS-only)
+.accordion-icon {
+  width: 16px;
+  height: 16px;
+  position: relative;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 2px;
+    background: $sux-primary-gray-100;
+    top: 50%;
+    transform-origin: center;
+  }
+
+  // Chevron down (default closed state)
+  &::before {
+    left: 2px;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    right: 2px;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
+// Rotate chevron when open
+.accordion-toggle:checked + .accordion-header .accordion-icon {
+  transform: rotate(180deg);
+}
+
+// Accordion content (collapsible)
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 0;
+}
+
+// Open state
+.accordion-toggle:checked ~ .accordion-content {
+  max-height: 1000px; // Generous max height for smooth animation
+  opacity: 1;
+}
+
+// General content variant
+.general-content {
+  padding: $sux-spacing-032 $sux-spacing-024 $sux-spacing-024;
+  border-top: 1px solid #d9d9d9;
+  display: flex;
+  flex-direction: column;
+  gap: $sux-spacing-016;
+
+  h3 {
+    @include sux-text-medium;
+    color: $sux-primary-gray-100;
+    margin: 0;
+  }
+
+  p {
+    @include sux-text;
+    color: $sux-primary-gray-100;
+    margin: 0;
+  }
+}
+
+// Download content variant
+.download-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.download-item {
+  display: flex;
+  align-items: center;
+  gap: $sux-spacing-024;
+  padding: 14px $sux-spacing-024 12px;
+  border-top: 1px solid #d9d9d9;
+
+  &:hover {
+    background: #f5f5f5;
+  }
+}
+
+.download-info {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.download-title {
+  @include sux-text-small;
+  font-weight: 500;
+  line-height: 22px;
+  color: $sux-primary-gray-100;
+}
+
+.download-number {
+  @include sux-text-small;
+  color: $sux-gray-50;
+}
+
+.download-actions {
+  display: flex;
+  gap: $sux-spacing-024;
+  flex-shrink: 0;
+}
+
+.icon-button {
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: $sux-primary-blue-100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: darken($sux-primary-blue-100, 10%);
+  }
+
+  &:focus {
+    outline: 2px solid $sux-primary-blue-100;
+    outline-offset: 2px;
+  }
+
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+// Responsive behavior for mobile
+@media (max-width: 600px) {
+  .accordion-container {
+    max-width: 100%;
+    padding: $sux-spacing-024;
+  }
+
+  .accordion-list {
+    gap: $sux-spacing-008;
+  }
+}

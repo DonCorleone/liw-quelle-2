@@ -49,7 +49,17 @@ export class Index {
     {
       path: '/grid',
       title: 'Grid System',
-      description: 'Responsive breakpoints, grid specifications, and layout containers'
-    }
+      description: 'Responsive breakpoints and grid specifications'
+    },
+    {
+      path: '/accordion',
+      title: 'Accordion',
+      description: 'CSS-only collapsible content with General and Download variants'
+    },
+    {
+      path: '/stepper',
+      title: 'Stepper & Slider',
+      description: 'Interactive rating scales with discrete steps and continuous sliders'
+    },
   ];
 }
